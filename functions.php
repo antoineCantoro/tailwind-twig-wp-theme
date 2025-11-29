@@ -235,3 +235,11 @@ function enqueue_vite_assets() {
 function vite_is_dev_server_running(): bool {
 	return @fsockopen('localhost', 5173) !== false;
 }
+
+/**
+ * Deregister the block library CSS
+ */
+function wps_deregister_styles() {
+	wp_dequeue_style( 'wp-block-library' );
+}
+add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
