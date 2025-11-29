@@ -1,0 +1,7 @@
+/* tailwind */
+
+/* tailwind */
+@import './tailwind.css';
+
+@source '../../**/*.twig';
+@source '../../**/**/*.twig';

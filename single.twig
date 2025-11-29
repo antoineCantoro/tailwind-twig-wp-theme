@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  <h1 class="big-title text-xl">{{ foo }}</h1>
+  <h2 class="post-title">{{ post.title }}</h2>
+
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+
+  <div class="bg-red-500 p-10">test</div>
+
+  <div class="body font-bold">
+	  {{ post.content }}
+
+
+    <pre>
+      {{ test_variable }}
+    </pre>
+
+    <button type="submit" class="group mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-rose-600 px-5 py-3 text-white transition focus:ring-2 focus:ring-yellow-400 focus:outline-hidden sm:mt-0 sm:w-auto">
+      <span class="text-sm font-medium"> Sign Up </span>
+
+      <svg class="size-5 shadow-sm rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+      </svg>
+    </button>
+  </div>
+{% endblock %}
