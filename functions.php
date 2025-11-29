@@ -241,5 +241,8 @@ function vite_is_dev_server_running(): bool {
  */
 function wps_deregister_styles() {
 	wp_dequeue_style( 'wp-block-library' );
+	wp_dequeue_style( 'global-styles' );
+	wp_dequeue_style( 'wp-emoji-styles' );
+	wp_dequeue_style( 'classic-theme-styles' );
 }
 add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );

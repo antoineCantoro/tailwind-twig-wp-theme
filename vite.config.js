@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import tailwindcss from '@tailwindcss/vite';
+import liveReload from 'vite-plugin-live-reload';
 
 export default defineConfig( {
 	root: 'sources',
@@ -15,5 +16,8 @@ export default defineConfig( {
 		manifest: true,
 	},
 	cors: true,
-	plugins: [ tailwindcss() ],
+	plugins: [ tailwindcss(), liveReload( [ '../**/*.php', '../**/*.twig' ] ) ],
+	watch: [
+		'./**/*.(php|twig)',
+	],
 } );

@@ -1,5 +1,8 @@
-{{ function('get_header') }}
-{% include "/snippets/organisms/header.twig" %}
+{# {{ function('get_header') }} #}
+{% include "/template-parts/html-head.twig" %}
+<body>
   {% block content %}
   {% endblock %}
-{{ function('get_footer') }}
+  {{ function('wp_footer') }}
+</body>
+</html>
