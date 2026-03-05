@@ -260,6 +260,6 @@ add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
 add_action( 'wp_print_scripts', 'wps_deregister_scripts', 100 );
 add_filter( 'should_load_separate_core_block_assets', '__return_false', 99 );
 
-remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-remove_action( 'wp_enqueue_scripts', 'wp_enqueue_emoji_styles' );
+remove_action( 'wp_head', 'wp_enqueue_emoji_styles', 7 );
+// remove_action( 'wp_enqueue_scripts', 'wp_enqueue_emoji_styles' );
 remove_action( 'wp_head', 'wp_img_auto_sizes_contain_inline_css' );

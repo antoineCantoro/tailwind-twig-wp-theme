@@ -10,5 +10,7 @@
 $context = Timber::context();
 $post = Timber::get_post();
 $post_type = get_post_type();
+
 $context['test_variable'] = 'Hello, Timber!';
+$context['test_variable_2'] = $post_type;
 Timber::render( 'single.twig', $context );

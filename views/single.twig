@@ -1,17 +1,12 @@
 {% extends "base.twig" %}
 
 {% block content %}
-  <h1 class="big-title text-xl">{{ foo }}</h1>
-  <h2 class="post-title">{{ post.title }}</h2>
+  <h1 class="text-3xl font-bold">{{ post.title }}</h1>
 
-  <h1 class="text-3xl font-bold underline" id="primary">
-    Hello world!
-  </h1>
+  {% include "/snippets/molecules/card.twig" %}
 
-  {% include "/snippets/atoms/button.twig" %}
-
-  <div class="font-bold text-white">
-    <div class="bg-pink-500 p-10">test</div>
+  <div class="font-bold text-white m-5 rounded-md truncate">
+    <div class="bg-pink-500 p-10 ">test</div>
     <div class="bg-red-500 p-10">test</div>
     <div class="bg-blue-500 p-10">test</div>
     <div class="bg-green-500 p-10">test</div>
@@ -24,6 +19,9 @@
 
     <pre>
       {{ test_variable }}
+    </pre>
+    <pre>
+      {{ test_variable_2 }}
     </pre>
   </div>
 {% endblock %}
